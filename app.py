@@ -9,5 +9,5 @@ def reed_api():
     'keywords':'Software',
     'LocationName':'London'
     }
-    result=requests.get(Reed_Api,params=Request_Params,auth=Authorization_Key)
+    result=requests.get(Reed_Api,params=Request_PARAMS)
     result.json() 
