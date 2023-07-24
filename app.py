@@ -1,7 +1,7 @@
-from flask import Flask
+from flask import Flask, jsonify
 import requests
 from requests.auth import HTTPBasicAuth
-Authorization_Key="fe4c8fa7-c07c-422e-9573-4659750ab08b"
+Authorization_Key=HTTPBasicAuth('fe4c8fa7-c07c-422e-9573-4659750ab08b','')
 app = Flask('Flask')
 @app.route("/")
 def reed_api():
@@ -11,4 +11,4 @@ def reed_api():
     'LocationName':'London'
     }
     result=requests.get(Reed_Api,params=Request_PARAMS,auth=Authorization_Key)
-    result.json() 
+    return jsonify(result.json())
