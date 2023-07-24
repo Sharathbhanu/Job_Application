@@ -1,5 +1,6 @@
 from flask import Flask
 import requests
+from requests.auth import HTTPBasicAuth
 Authorization_Key="fe4c8fa7-c07c-422e-9573-4659750ab08b"
 app = Flask('Flask')
 @app.route("/")
@@ -9,5 +10,5 @@ def reed_api():
     'keywords':'Software',
     'LocationName':'London'
     }
-    result=requests.get(Reed_Api,params=Request_PARAMS)
+    result=requests.get(Reed_Api,params=Request_PARAMS,auth=Authorization_Key)
     result.json() 
