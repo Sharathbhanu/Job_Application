@@ -22,7 +22,7 @@ def reed_api():
     print(oneresult['results'][1] )
     one=oneresult['results'][1]['jobDescription']
     two=oneresult['results'][1]['locationName']
-    
+    return two
     
     
 
