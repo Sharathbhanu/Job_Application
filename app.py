@@ -22,7 +22,12 @@ def reed_api():
     print(oneresult['results'][1] )
     one=oneresult['results'][1]['jobDescription']
     two=oneresult['results'][1]['locationName']
-    return two
+    if oneresult['results']:
+    # If 'results' is not empty, print the first item in the list
+        three=oneresult['results'][0]
+        return three
+    else:
+        return "No matching job listings found."
     
     
 
