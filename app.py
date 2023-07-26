@@ -9,7 +9,8 @@ def reed_api():
     Request_PARAMS={
     'keywords':'Software',
     'LocationName':'Staines Green',
-    'resultsToTake':'50'
+    'resultsToTake':'50',
+    'distanceFromLocation':'10'
     }
     result=requests.get(Reed_Api,params=Request_PARAMS,auth=Authorization_Key)
     return result.json()
