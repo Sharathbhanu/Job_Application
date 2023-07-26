@@ -15,5 +15,6 @@ def reed_api():
     Request_Params['contract'] = 'True'
     Request_Params['minimumSalary']='60000'
     Request_Params['distanceFromLocation'] = '5'
+    Request_Params['employerId'] = '431258'
     result=requests.get(Reed_Api,params=Request_Params,auth=Authorization_Key)
     return jsonify(result.json())
