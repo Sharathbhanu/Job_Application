@@ -8,7 +8,7 @@ def reed_api():
     Reed_Api="https://www.reed.co.uk/api/1.0/search"
     Request_PARAMS={
     'keywords':'Software',
-    'LocationName':'London'
+    'LocationName':'Staines Green'
     }
     result=requests.get(Reed_Api,params=Request_PARAMS,auth=Authorization_Key)
-    return jsonify(result.json())
+    return result.json()
