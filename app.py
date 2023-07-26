@@ -8,7 +8,8 @@ def reed_api():
     Reed_Api="https://www.reed.co.uk/api/1.0/search"
     Request_PARAMS={
     'keywords':'Software',
-    'LocationName':'Staines Green'
+    'LocationName':'Staines Green',
+    'resultsToTake':'50'
     }
     result=requests.get(Reed_Api,params=Request_PARAMS,auth=Authorization_Key)
     return result.json()
