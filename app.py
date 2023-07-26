@@ -7,9 +7,9 @@ app = Flask('Flask')
 def reed_api():
     Reed_Api="https://www.reed.co.uk/api/1.0/search"
     Request_Params={
-    'keywords':'Software',
-    'LocationName':'Staines Green',
-    'resultsToTake':'50',
+    'keywords':'Software',# Search keyword
+    'LocationName':'Staines Green',# Location name
+    'resultsToTake':'50',# Maximum number of results to return
     'distanceFromLocation':'10'
     }
     Request_Params['contract'] = 'True'
@@ -17,4 +17,13 @@ def reed_api():
     Request_Params['distanceFromLocation'] = '5'
     Request_Params['employerId'] = '431258'
     result=requests.get(Reed_Api,params=Request_Params,auth=Authorization_Key)
-    return jsonify(result.json())
+    oneresult=result.json()
+    print(oneresult['results'][0] )
+    print(oneresult['results'][1] )
+    one=oneresult['results'][1]['jobDescription']
+    two=oneresult['results'][1]['locationName']
+    
+    
+    
+
+
