@@ -6,7 +6,7 @@ app = Flask('Flask')
 @app.route("/")# Defined the root route for the Flask app
 def reed_api():
     Reed_Api="https://www.reed.co.uk/api/1.0/search" # URL of the Reed.co.uk API
-    Request_Params={# Parameters for the API request
+    Request_Params={   # Parameters for the API request
     'keywords':'Software',# Search keyword
     'LocationName':'Staines Green',# Location name
     'resultsToTake':'50',# Maximum number of results to return
@@ -28,7 +28,7 @@ def reed_api():
     two=oneresult['results'][1]['locationName']
     four=(one,two) # Created a tuple containing job description and location name
     if oneresult['results']:
-    #  # If 'results' is not empty, return the first item in the listfirst item in the list
+    # If 'results' is not empty, return the first item in the listfirst item in the list
         three=oneresult['results'][0]
         return three
     else:
