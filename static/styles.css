@@ -75,3 +75,31 @@ body {
 .filter-container button:hover {
     background-color: #738541;
 }
+
+/* Styling for paragraphs within job results (if no results are found) */
+.job-results p {
+    text-align: center;
+    font-style: italic;
+    color: #6a1616;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    .filter-container {
+        padding: 15px;
+    }
+
+    /* Adjust styles for smaller screens */
+    .filter-container label,
+    .filter-container input[type="text"],
+    .filter-container input[type="number"],
+    .filter-container input[type="checkbox"],
+    .filter-container button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .filter-container button {
+        padding: 10px 15px;
+    }
+}
