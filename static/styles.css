@@ -17,3 +17,13 @@ body {
     margin: 20px auto;
     max-width: 600px;
 }
+
+/* Styling for each job listing */
+.job-listing {
+    background-color: #4288b4;
+    border: 1px solid #884242;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
