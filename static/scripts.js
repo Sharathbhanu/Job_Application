@@ -11,8 +11,20 @@ function displayJobResults(jobResults) {
          const jobListing = document.createElement("div");
          jobListing.classList.add("job-listing");
 
+        // Display all details from the first job using template literals
+        jobListing.innerHTML = `
+            <h2>${job.jobTitle}</h2>
+            <p>Job ID: ${job.jobId}</p>
+            <p>Employer: ${job.employerName}</p>
+            <p>Location: ${job.locationName}</p>
+            <p>Salary: ${job.minimumSalary} - ${job.maximumSalary} ${job.currency}</p>
+            <p>Expiration Date: ${job.expirationDate}</p>
+            <p>Date Posted: ${job.date}</p>
+            <p>Job Description: ${job.jobDescription}</p>
+            <p>Applications: ${job.applications}</p>
+            <a href="${job.jobUrl}" target="_blank">Job Details</a>
+        `;
 
-         
 function searchJobs() {
     // Get the user input values for search criteria
     const location = document.getElementById("location").value;
