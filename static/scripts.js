@@ -5,3 +5,11 @@ function searchJobs() {
     const contract = document.getElementById("contract").checked;
     const minimumSalary = document.getElementById("minimumSalary").value;
     const employerId = document.getElementById("employerId").value;
+    const searchData = {
+        location: location,
+        keywords: keywords,
+        distanceFromLocation: distanceFromLocation,
+        contract: contract,
+        minimumSalary: minimumSalary,
+        employerId: employerId
+    };
