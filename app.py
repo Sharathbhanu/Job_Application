@@ -4,6 +4,8 @@ from requests.auth import HTTPBasicAuth
 Authorization_Key=HTTPBasicAuth('fe4c8fa7-c07c-422e-9573-4659750ab08b','') # Provided my API key for authentication
 app = Flask(__name__)
 @app.route("/")# Defined the root route for the Flask app
+
+@app.route("/search", methods=["POST"])
 def search_jobs():
     Reed_Api="https://www.reed.co.uk/api/1.0/search" # URL of the Reed.co.uk API
     Request_Params={   # Parameters for the API request
@@ -17,21 +19,11 @@ def search_jobs():
     # Send the API request to Reed.co.uk and get the response
     }
     result=requests.get(Reed_Api,params=Request_Params,auth=Authorization_Key)
-    oneresult=result.json() # API response JSON
-    # Printed the first two results (for demonstration purposes)
-    print(oneresult['results'][0] )
-    print(oneresult['results'][1] )
-    # Extract job description and location name from the second result
-    one=oneresult['results'][1]['jobDescription']
-    two=oneresult['results'][1]['locationName']
-    four=(one,two) # Created a tuple containing job description and location name
-    if oneresult['results']:
-    # If 'results' is not empty, return the first item in the listfirst item in the list
-        three=oneresult['results'][0]
-        return three
-    else:
-    # If 'results' is empty, returning the below statement
-        return "No matching job listings found."
+    return result.json() # API response JSON
+   
+if __name__ == "__main__":
+    app.run()
+
     
     
 
