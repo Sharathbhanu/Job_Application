@@ -4,6 +4,8 @@ from requests.auth import HTTPBasicAuth
 Authorization_Key=HTTPBasicAuth('fe4c8fa7-c07c-422e-9573-4659750ab08b','') # Provided my API key for authentication
 app = Flask(__name__)
 @app.route("/")# Defined the root route for the Flask app
+def index():
+    return render_template("index.html")
 
 @app.route("/search", methods=["POST"])
 def search_jobs():
