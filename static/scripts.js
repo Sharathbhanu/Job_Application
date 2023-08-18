@@ -24,7 +24,15 @@ function displayJobResults(jobResults) {
             <p>Applications: ${job.applications}</p>
             <a href="${job.jobUrl}" target="_blank">Job Details</a>
         `;
-
+        // Append the job listing to the container
+        jobResultsContainer.appendChild(jobListing);
+    } else {
+        // Display a message if no job results are found
+        const noResultsMessage = document.createElement("p");
+        noResultsMessage.textContent = "No jobs found.";
+        jobResultsContainer.appendChild(noResultsMessage);
+    }
+}
 function searchJobs() {
     // Get the user input values for search criteria
     const location = document.getElementById("location").value;
