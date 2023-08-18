@@ -6,7 +6,13 @@ function displayJobResults(jobResults) {
     // Check if job results are available and not empty
     if (jobResults && jobResults.results.length > 0) {
         const job = jobResults.results[0]; // Get the details of the first job
-        
+
+         // Create a div element to display job details
+         const jobListing = document.createElement("div");
+         jobListing.classList.add("job-listing");
+
+
+         
 function searchJobs() {
     // Get the user input values for search criteria
     const location = document.getElementById("location").value;
