@@ -27,3 +27,10 @@ body {
     padding: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Styling for job listing headings */
+.job-listing h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #9f1948;
+}
