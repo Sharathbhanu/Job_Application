@@ -21,8 +21,9 @@ def search_jobs():
     'contract' : request.json['contract'], # Contract type: True (contract) or False (permanent)
     'minimumSalary': request.json['minimumSalary'], # Minimum salary for job listings
     'employerId' : request.json['employerId']# Employer ID for specific employer
-    # Send the API request to Reed.co.uk and get the response
     }
+    # Send the API request to Reed.co.uk and get the response
+
     result=requests.get(Reed_Api,params=Request_Params,auth=Authorization_Key)
     return result.json() # API response JSON
    

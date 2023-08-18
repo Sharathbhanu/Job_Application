@@ -4,29 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Job Search Filters</title>
-    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+    <!-- Filter container -->
     <div class="filter-container">
+        <!-- Filter heading -->
         <h1>Filter your search</h1>
+
+        <!-- Location input -->
         <label for="location">Location:</label>
         <input type="text" id="location" name="location" placeholder="Enter location">
 
+        <!-- Keywords input -->
         <label for="keywords">Keywords:</label>
         <input type="text" id="keywords" name="keywords" placeholder="Enter keywords">
 
+        <!-- Distance from Location input -->
         <label for="distanceFromLocation">Distance from Location (miles):</label>
         <input type="number" id="distanceFromLocation" name="distanceFromLocation" placeholder="Enter distance">
 
+        <!-- Contract checkbox -->
         <label for="contract">Contract:</label>
         <input type="checkbox" id="contract" name="contract" value="true">
 
+        <!-- Minimum Salary input -->
         <label for="minimumSalary">Minimum Salary:</label>
         <input type="number" id="minimumSalary" name="minimumSalary" placeholder="Enter minimum salary">
 
+        <!-- Employer ID input -->
         <label for="employerId">Employer ID:</label>
         <input type="text" id="employerId" name="employerId" placeholder="Enter employer ID">
+
+        <!-- Search button -->
         <button onclick="searchJobs()">Search Jobs</button>
     </div>
+
+    <!-- Job results container -->
+    <div class="job-results">
+        <!-- Job search results will be displayed here dynamically using JavaScript -->
+    </div>
+
+    <!-- JavaScript scripts -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 </body>
 </html>
