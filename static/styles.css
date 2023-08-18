@@ -7,3 +7,13 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Styling for the filter container */
+.filter-container {
+    background-color: #28a242;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
