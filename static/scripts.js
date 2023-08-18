@@ -33,6 +33,7 @@ function displayJobResults(jobResults) {
         jobResultsContainer.appendChild(noResultsMessage);
     }
 }
+
 function searchJobs() {
     // Get the user input values for search criteria
     const location = document.getElementById("location").value;
@@ -51,3 +52,21 @@ function searchJobs() {
         minimumSalary: minimumSalary,
         employerId: employerId
     };
+
+     // Make a POST request to the Flask server to search for jobs
+     fetch("/search", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(searchData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Display the job search results on the web page
+        displayJobResults(data);
+    })
+    .catch(error => {
+        console.error("Error occurred during search:", error);
+    });
+}
