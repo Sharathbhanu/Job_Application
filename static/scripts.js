@@ -51,6 +51,7 @@ function searchJobs() {
         distanceFromLocation: distanceFromLocation,
         contract: contract,
         minimumSalary: minimumSalary,
+        maximumSalary: maximumSalary,
         employerId: employerId
     };
 
