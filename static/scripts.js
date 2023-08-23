@@ -41,6 +41,7 @@ function searchJobs() {
     const distanceFromLocation = document.getElementById("distanceFromLocation").value;
     const contract = document.getElementById("contract").checked;
     const minimumSalary = document.getElementById("minimumSalary").value;
+    const maximumSalary = document.getElementById("maximumSalary").value;
     const employerId = document.getElementById("employerId").value;
 
     // Create an object with the search criteria
