@@ -20,6 +20,7 @@ def search_jobs():
     # Additional parameters for filtering
     'contract' : request.json['contract'], # Contract type: True (contract) or False (permanent)
     'minimumSalary': request.json['minimumSalary'], # Minimum salary for job listings
+    'maximumSalary': request.json['maximumSalary'], # Maximum salary for job listings
     'employerId' : request.json['employerId']# Employer ID for specific employer
     }
     # Send the API request to Reed.co.uk and get the response
